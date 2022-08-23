@@ -25,14 +25,13 @@ flex-direction: column;
 
 .location {
     font-size: 40px;
-   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: bold;
 }
 
-.range, .date, .temp, .description {
+.date, .temp, .description {
     font-size: 30px;
     color: black;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bolder;
 }
 .icon {
     /* width: 100px;
@@ -44,10 +43,9 @@ flex-direction: column;
 
 .tempmax, .tempmin, .humidity, .sunrise, .sunset {
     font-size: 24px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: black;
+    font-weight: lighter;
 }
-
 
 .saying {
     font-size: 60px;
@@ -57,8 +55,13 @@ flex-direction: column;
     text-shadow: -1px 0 rgb(246, 246, 246), 0 1px #FFFFFF, 1px 0 #FFFFFF, 0 -1px #FFFFFF
 }
 
+img.ferry {
+    width: 600px;
+    height: 300px;
 
-/* /* button {
+}
+
+ button {
     margin: 0.5em;
     border-radius: 50%;
     border: none;
@@ -73,7 +76,7 @@ flex-direction: column;
 button:hover {
     background-color: azure;
 }
-input.search-bar {
+/* input.search-bar {
     border: none;
     outline: none;
     padding: 0.5em 1em;
@@ -85,8 +88,7 @@ input.search-bar {
     width: calc(100% - 100px)
 } */
 
-
-.description {
-    text-transform: capitalize;
-    margin-left: 8px;
-} */ 
+h2.googlemap, h2.ferry, form {
+    font-size: 35px;
+    display: inline;
+}
