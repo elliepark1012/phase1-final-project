@@ -5,7 +5,8 @@ let month = ('0' + (today.getMonth() + 1)).slice(-2);
 let day = ('0' + today.getDate()).slice(-2);
 
 let dateString = year + '-' + month  + '-' + day;
-  
+
+
   const getJSON = function(url, callback) {
       const xhr = new XMLHttpRequest();
       xhr.open('GET', url, true);
@@ -24,14 +25,13 @@ let dateString = year + '-' + month  + '-' + day;
     getJSON(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/11693/${dateString}?unitGroup=us&key=276XSQHSHP7GMC4YFTCXB24NG&contentType=json`,
     function(err, data) {
     if(err !== null) {
-    alert('예상치 못한 오류 발생.' + err);
+    alert('unexpected error' + err);
     } else {
     loadWeather(data);
     }
     });
 
     function loadWeather(data) {
-      let range=document.querySelector('.range');
       let date = document.querySelector('.date');
       let tempMax= document.querySelector('.tempmax');
       let tempMin= document.querySelector('.tempmin');
@@ -43,8 +43,8 @@ let dateString = year + '-' + month  + '-' + day;
       let icon=document.querySelector('.icon');
       let weatherIcon = data.days[0].icon;
 
-      range.append(`Weather from ${data.days[0].datetime} to ${data.days[2].datetime}`);
-      date.append (`Today is: ${data.days[0].datetime}`);
+    
+      date.append (`Today is ${data.days[0].datetime}`);
       temp.append (`Current Temperature: ${data.days[0].temp} °F`);
       description.append (`${data.days[0].description}`);
       tempMax.append (`Max Temperature: ${data.days[0].tempmax} °F`);
