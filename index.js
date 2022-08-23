@@ -1,4 +1,11 @@
+let today = new Date();
 
+let year = today.getFullYear();
+let month = ('0' + (today.getMonth() + 1)).slice(-2);
+let day = ('0' + today.getDate()).slice(-2);
+
+let dateString = year + '-' + month  + '-' + day;
+  
   const getJSON = function(url, callback) {
       const xhr = new XMLHttpRequest();
       xhr.open('GET', url, true);
@@ -14,7 +21,7 @@
       xhr.send();
     };
     
-    getJSON('https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/11693/2022-08-18/2022-08-20?unitGroup=us&key=276XSQHSHP7GMC4YFTCXB24NG&contentType=json',
+    getJSON(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/11693/${dateString}?unitGroup=us&key=276XSQHSHP7GMC4YFTCXB24NG&contentType=json`,
     function(err, data) {
     if(err !== null) {
     alert('예상치 못한 오류 발생.' + err);
