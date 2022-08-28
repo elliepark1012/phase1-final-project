@@ -56,9 +56,14 @@ let dateString = year + '-' + month  + '-' + day;
       
     }
 
-let container, df;
+    let container, df;
 
-function hourly(data){
+    document.addEventListener('DOMContentLoaded', hourly);
+
+    function hourly(data){
+    container = document.getElementById('container');
+    df = new DocumentFragment();
+  
         data.days.forEach((hours)=>{
             let div = document.createElement('div');
             div.classList.add('hour');
@@ -82,7 +87,6 @@ function hourly(data){
     buttonGoogleMap.addEventListener("click",function(){
       document.location.href ='https://www.google.com/maps'
     });
-
 
     buttonFerry = document.getElementById("ferry");
     buttonFerry.addEventListener("click", function(){
