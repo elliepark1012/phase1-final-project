@@ -80,15 +80,6 @@ overflow: scroll;
     font-size: 1.0rem;
     text-align: center;
 }
-.precip{
-    background-color: hsl(200, 50%, 80%);
-    color: hsl(200, 50%, 40%);
-}
-.hot{
-    background-color: gold;
-    font-weight: bold;
-}
-
 
 img.ferry {
     width: 600px;
@@ -110,17 +101,6 @@ img.ferry {
 button:hover {
     background-color: azure;
 }
-/* input.search-bar {
-    border: none;
-    outline: none;
-    padding: 0.5em 1em;
-    border-radius: 24px; 
-    background-color: aliceblue;
-    color:black;
-    font-family: inherit;
-    font-size: 150%;
-    width: calc(100% - 100px)
-} */
 
 h2.googlemap, h2.ferry, form {
     font-size: 35px;
