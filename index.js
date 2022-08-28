@@ -41,20 +41,31 @@ let dateString = year + '-' + month  + '-' + day;
       let sunset=document.querySelector('.sunset');
       let description=document.querySelector('.description');
       let icon=document.querySelector('.icon');
-      let weatherIcon = data.days[0].icon;
+      let iconSet = data.days[0].icon;
 
     
       date.append (`Today is ${data.days[0].datetime}`);
       temp.append (`Current Temperature: ${data.days[0].temp} °F`);
-      description.append (`${data.days[0].description}`);
+      description.append (`${data.description}`);
       tempMax.append (`Max Temperature: ${data.days[0].tempmax} °F`);
       tempMin.append (`Min Temperature: ${data.days[0].tempmin} °F`);
       humidity.append (`Humidity: ${data.days[0].humidity}`);
       sunrise.append (`Sunrise Time: ${data.days[0].sunrise}`);
       sunset.append (`Sunset Time: ${data.days[0].sunset}`);
-      icon.innerHTML = `<img src='https://www.visualcrossing.com/img/${weatherIcon}.3f13edae.svg'>`;
+      icon.innerHTML = `<img src='https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/weatherdata/forecast?${iconSet}=icons1&aggregateHours=24&combinationMethod=aggregate&shortColumnNames=true&contentType=json&unitGroup=metric&locationMode=single&locations=49.1791,-122.3161&forecastDays=7&key=276XSQHSHP7GMC4YFTCXB24NG'>`;
       
     }
+
+    buttonGoogleMap = document.getElementById("googlemap");
+    buttonGoogleMap.addEventListener("click",function(){
+      document.location.href ='https://www.google.com/maps'
+    });
+
+
+    buttonFerry = document.getElementById("ferry");
+    buttonFerry.addEventListener("click", function(){
+    document.location.href = 'https://www.ferry.nyc/routes-and-schedules/route/rockaway/';
+});
     
 
  
