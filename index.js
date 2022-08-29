@@ -51,7 +51,7 @@ let dateString = year + '-' + month  + '-' + day;
       humidity.append (`Humidity: ${data.days[0].humidity}`);
       sunrise.append (`Sunrise Time: ${data.days[0].sunrise}`);
       sunset.append (`Sunset Time: ${data.days[0].sunset}`);
-      icon.innerHTML = `<img src='https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/weatherdata/forecast?${iconSet}=icons1&aggregateHours=24&combinationMethod=aggregate&shortColumnNames=true&contentType=json&unitGroup=metric&locationMode=single&locations=49.1791,-122.3161&forecastDays=7&key=276XSQHSHP7GMC4YFTCXB24NG'>`;
+      icon.innerHTML = `<img src='https://www.visualcrossing.com/img/${iconSet}.3f13edae.svg'>`;
     }
 
     let container, df;
