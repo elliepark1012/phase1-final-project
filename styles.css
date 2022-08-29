@@ -47,11 +47,12 @@ margin: auto;
     text-shadow: -1px 0 rgb(246, 246, 246), 0 1px #FFFFFF, 1px 0 #FFFFFF, 0 -1px #FFFFFF
 }
 
-#container{
+#container {
     margin: 2rem;
     display:flex;
     flex-flow: row wrap;    
 }
+
 .hour{
     width:100px;
     height: 100px;
@@ -60,6 +61,7 @@ margin: auto;
     font-size: 3.6rem;
     position: relative;
 }
+
 .hour span{
     position: absolute;
     bottom: 0;
@@ -76,7 +78,7 @@ img.ferry {
     height: 300px;
 }
 
- button {
+button {
     margin: 0.5em;
     border-radius: 50%;
     border: none;
