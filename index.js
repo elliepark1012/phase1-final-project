@@ -41,7 +41,6 @@ let dateString = year + '-' + month  + '-' + day;
       let sunset=document.querySelector('.sunset');
       let description=document.querySelector('.description');
       let icon=document.querySelector('.icon');
-      let iconSet = data.days[0].icon;
 
       date.append (`Today is ${data.days[0].datetime}`);
       temp.append (`Current Temperature: ${data.days[0].temp} °F`);
@@ -51,7 +50,7 @@ let dateString = year + '-' + month  + '-' + day;
       humidity.append (`Humidity: ${data.days[0].humidity}`);
       sunrise.append (`Sunrise Time: ${data.days[0].sunrise}`);
       sunset.append (`Sunset Time: ${data.days[0].sunset}`);
-      icon.innerHTML = `<img src='https://www.visualcrossing.com/img/${iconSet}.3f13edae.svg'>`;
+      icon.innerHTML = `<img src='https://www.visualcrossing.com/img/${data.days[0].icon}.3f13edae.svg' />`;
     }
 
     let container, df;
