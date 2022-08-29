@@ -60,9 +60,8 @@ let dateString = year + '-' + month  + '-' + day;
 
     function hourly(data){
     container = document.getElementById('container');
-    
+
         data.days[0].hours.forEach((hours)=>{
-          console.log(data.days.hours)
             let div = document.createElement('div');
             div.classList.add('hour');
             let timestamp = hours.datetime;
@@ -72,8 +71,7 @@ let dateString = year + '-' + month  + '-' + day;
             div.title = hours.summary;
           
             let span = document.createElement('span');
-            let timmy = new Date(timestamp * 1000);
-            span.textContent = timmy.getHours().toString().concat(":00");
+            span.textContent = timestamp
             
             div.appendChild(span);
             container.appendChild(div);
