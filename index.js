@@ -43,7 +43,6 @@ let dateString = year + '-' + month  + '-' + day;
       let icon=document.querySelector('.icon');
       let iconSet = data.days[0].icon;
 
-    
       date.append (`Today is ${data.days[0].datetime}`);
       temp.append (`Current Temperature: ${data.days[0].temp} °F`);
       description.append (`${data.description}`);
@@ -53,7 +52,6 @@ let dateString = year + '-' + month  + '-' + day;
       sunrise.append (`Sunrise Time: ${data.days[0].sunrise}`);
       sunset.append (`Sunset Time: ${data.days[0].sunset}`);
       icon.innerHTML = `<img src='https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/weatherdata/forecast?${iconSet}=icons1&aggregateHours=24&combinationMethod=aggregate&shortColumnNames=true&contentType=json&unitGroup=metric&locationMode=single&locations=49.1791,-122.3161&forecastDays=7&key=276XSQHSHP7GMC4YFTCXB24NG'>`;
-      
     }
 
     let container, df;
@@ -62,9 +60,9 @@ let dateString = year + '-' + month  + '-' + day;
 
     function hourly(data){
     container = document.getElementById('container');
-    df = new DocumentFragment();
-  
-        data.days.forEach((hours)=>{
+    
+        data.days[0].hours.forEach((hours)=>{
+          console.log(data.days.hours)
             let div = document.createElement('div');
             div.classList.add('hour');
             let timestamp = hours.datetime;
@@ -78,9 +76,8 @@ let dateString = year + '-' + month  + '-' + day;
             span.textContent = timmy.getHours().toString().concat(":00");
             
             div.appendChild(span);
-            df.appendChild(div);
+            container.appendChild(div);
         });
-        container.appendChild(df);
     }
 
     buttonGoogleMap = document.getElementById("googlemap");
