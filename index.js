@@ -29,7 +29,7 @@ let dateString = year + '-' + month  + '-' + day;
     loadWeather(data);
     hourly(data)
     }
-    });
+  });
 
     function loadWeather(data) {
       let date = document.querySelector('.date');
