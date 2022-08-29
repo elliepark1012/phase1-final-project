@@ -1,5 +1,4 @@
 let today = new Date();
-
 let year = today.getFullYear();
 let month = ('0' + (today.getMonth() + 1)).slice(-2);
 let day = ('0' + today.getDate()).slice(-2);
@@ -54,7 +53,6 @@ let dateString = year + '-' + month  + '-' + day;
     }
 
     let container, df;
-
     document.addEventListener('DOMContentLoaded', hourly);
 
     function hourly(data){
@@ -81,8 +79,7 @@ let dateString = year + '-' + month  + '-' + day;
     buttonGoogleMap.addEventListener("click",function(){
       document.location.href ='https://www.google.com/maps'
     });
-
     buttonFerry = document.getElementById("ferry");
     buttonFerry.addEventListener("click", function(){
     document.location.href = 'https://www.ferry.nyc/routes-and-schedules/route/rockaway/';
-})
+    })
