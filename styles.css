@@ -3,13 +3,12 @@ width: 100%;
 height: 100%;
 text-align: center;
 font-family: 'Trebuchet MS', sans-serif;
-display: flex;
+/* display: flex; */
 justify-content: center;
 align-items: center;
 height: 100vh;
 background-image: url("https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_1800/https://surfsimply.com/wp-content/uploads/2017/11/IceCreamHeadaches-Wave-Julien-Roubinet_fullwidth.jpg");;
 flex-direction: column;
-overflow: scroll;
 }
 
 .box {
@@ -19,8 +18,6 @@ overflow: scroll;
     border-radius: 30px;
     max-width: 1000px;
     margin: 2em;
-    width:100%;
-    height: 800vh;
 }
 
 .location {
@@ -34,8 +31,6 @@ overflow: scroll;
     font-weight: bolder;
 }
 .icon {
-    /* width: 100px;
-    height: 100px; */
     width: 30%;
     height: 30%;
     display: inline-block;
