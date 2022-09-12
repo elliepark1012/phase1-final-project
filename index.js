@@ -49,7 +49,7 @@ let dateString = year + '-' + month  + '-' + day;
       humidity.append (`Humidity: ${data.days[0].humidity}`);
       sunrise.append (`Sunrise Time: ${data.days[0].sunrise}`);
       sunset.append (`Sunset Time: ${data.days[0].sunset}`);
-      icon.innerHTML = `<img src='https://www.visualcrossing.com/img/${data.days[0].icon}.3f13edae.svg' />`;
+      icon.innerHTML = `<img src='https://www.visualcrossing.com/img/${data.days[0].icon}.svg' />`;
     }
 
     let container, df;
