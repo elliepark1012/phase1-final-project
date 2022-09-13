@@ -19,18 +19,28 @@ let dateString = year + '-' + month  + '-' + day;
       };
       xhr.send();
     };
-  
+    console.log("hey")
+
     getJSON(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/11693/${dateString}?unitGroup=us&key=276XSQHSHP7GMC4YFTCXB24NG&contentType=json`,
     function(err, data) {
     if(err !== null) {
     alert('unexpected error' + err);
     } else {
+      console.log("hello");
     loadWeather(data);
     hourly(data)
+    
     }
   });
+  console.log("I");
+  // fetch('https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/chicago%20il?unitGroup=us&key=276XSQHSHP7GMC4YFTCXB24NG&contentType=jsonttps://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/11693/${dateString}?unitGroup=us&key=276XSQHSHP7GMC4YFTCXB24NG&contentType=json')
+  //   .then(resp => resp.json())
+  //   .then(data => console.log(data))
+  //   .catch(err => console.log(err))
+
 
     function loadWeather(data) {
+      
       let date = document.querySelector('.date');
       let tempMax= document.querySelector('.tempmax');
       let tempMin= document.querySelector('.tempmin');
@@ -57,9 +67,9 @@ let dateString = year + '-' + month  + '-' + day;
 
     function hourly(data){
     container = document.getElementById('container');
-
+    
         data.days[0].hours.forEach((hours)=>{
-            let div = document.createElement('div');
+            const div = document.createElement('div');
             div.classList.add('hour');
             let timestamp = hours.datetime;
             div.id = 'ts_' + timestamp.toString();
@@ -72,6 +82,7 @@ let dateString = year + '-' + month  + '-' + day;
             
             div.appendChild(span);
             container.appendChild(div);
+            // div = "hotdog";
         });
     }
 
@@ -80,6 +91,32 @@ let dateString = year + '-' + month  + '-' + day;
       document.location.href ='https://www.google.com/maps'
     });
     buttonFerry = document.getElementById("ferry");
-    buttonFerry.addEventListener("click", function(){
-    document.location.href = 'https://www.ferry.nyc/routes-and-schedules/route/rockaway/';
+    buttonFerry.addEventListener("mouseover", function(){
+      let img = document.getElementById('timetable')
+      let weekendFinder = today.getDay()
+      if (weekendFinder === 0 || weekendFinder === 6) {
+        console.log('weekend')
+        return (img.src='./weekend.png') 
+      } else {
+        console.log('weekday')
+        return (img.src='./weekday.png')
+      }
     })
+
+  //  Live Coding - Change your ferry schedule click event to a mouseover event. 
+  //  When the person puts their mouseover the icon the appropriate picture (based on the day of the week) 
+  //  should come up in the DOM. Make a div with an id of ferryContainer that initially contains the ferry 
+  //  picture but switches to the schedule once the mouseover event fires.
+
+  // change to mouseover 
+  // a new div id="ferryContainer" with ferry pictures  
+  // make img tag 
+  // figure out weekday or weekend 
+  // setting the right src  
+  // .apend weekday /weekend pics to div 
+//   const d = new Date();
+// let day = d.getDay();
+// Get the day of the week of a specific date:
+
+// const d = new Date("July 21, 1983 01:15:00");
+// let day = d.getDay();---0,6 weeekend

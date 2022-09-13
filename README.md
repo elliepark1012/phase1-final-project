@@ -23,3 +23,6 @@ Using addEventListener ("click") to link it with nyc ferry site and googlemap
 
 * Comments 
 Using disqus for users to share their experiences
+
+# Video Link: https://youtu.be/OESSUK1wMwE
+# Blog Link: https://medium.com/@elliepark1012/addeventlistner-from-phase-1-final-project-bd9786da008d
